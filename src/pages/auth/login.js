@@ -25,20 +25,20 @@ const Page = () => {
   const [method, setMethod] = useState('email');
   const formik = useFormik({
     initialValues: {
-      email: 'contato@type.dev.br',
-      password: '123456',
+      email: '',
+      password: '',
       submit: null
     },
     validationSchema: Yup.object({
       email: Yup
         .string()
-        .email('Must be a valid email')
+        .email('O email deve ser válido')
         .max(255)
-        .required('Email is required'),
+        .required('Email é obrigatório'),
       password: Yup
         .string()
         .max(255)
-        .required('Password is required')
+        .required('Senha é obrigatória')
     }),
     onSubmit: async (values, helpers) => {
       try {
