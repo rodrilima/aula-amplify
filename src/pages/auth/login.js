@@ -59,14 +59,6 @@ const Page = () => {
     []
   );
 
-  const handleSkip = useCallback(
-    () => {
-      auth.skip();
-      router.push('/');
-    },
-    [auth, router]
-  );
-
   return (
     <>
       <Head>
@@ -97,7 +89,7 @@ const Page = () => {
               sx={{ mb: 3 }}
             >
               <Typography variant="h4">
-                Login
+                Entre no sistema
               </Typography>
             </Stack>
             <form
